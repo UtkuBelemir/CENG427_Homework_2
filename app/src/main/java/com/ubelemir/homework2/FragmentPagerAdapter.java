@@ -1,11 +1,9 @@
 package com.ubelemir.homework2;
 
-
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 
 public class FragmentPagerAdapter extends android.support.v4.app.FragmentPagerAdapter {
 

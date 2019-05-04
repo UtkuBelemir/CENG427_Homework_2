@@ -1,44 +1,24 @@
 package com.ubelemir.homework2;
 
-
-
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-
-import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-import java.io.IOException;
-
 import cz.msebera.android.httpclient.Header;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class CENGFragment extends Fragment {
-    private TextView textView;
     private String contentURL = "https://aybu.edu.tr/muhendislik/bilgisayar/";
     private String contentType;
     private String contentSelector = "";

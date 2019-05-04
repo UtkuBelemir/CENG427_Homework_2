@@ -1,34 +1,20 @@
 package com.ubelemir.homework2;
 
-
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import org.w3c.dom.Element;
-import org.w3c.dom.Text;
-
 import cz.msebera.android.httpclient.Header;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class FoodListFragment extends Fragment {
     private String contentURL = "https://aybu.edu.tr/sks";
     @Override
@@ -57,11 +43,6 @@ public class FoodListFragment extends Fragment {
                     tmpTextView = (TextView) getActivity().findViewById(textViews[i]);
                     tmpTextView.setText(dailyList.get(i+1).text());
                 }
-                /*foodList_date
-                        foodList_soup
-                foodList_primary
-                        foodList_secondary
-                foodList_drink*/
                 dialog.dismiss();
             }
 
@@ -71,16 +52,6 @@ public class FoodListFragment extends Fragment {
                 dialog.dismiss();
             }
         };
-    }
-
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        if(isVisibleToUser){
-/*            AsyncHttpClient httpClient = new AsyncHttpClient();
-            httpClient.get(contentURL, loadHTMLContent());
-            */
-        }
     }
 }
 
